@@ -6,36 +6,42 @@ stable: false
 
 # Session Workflow
 
-How Claude (or any agent) starts and ends a working session with Jay.
+How Claude (or any agent) starts and ends a working session with Jay. This ritual is now operationalized by three skills: `brain-bootstrap` (start), `brain-pull` (mid-session), `session-synthesis` (end). The descriptions below are the ritual's spec — the skills are the implementation.
 
-## Start
+## Start — handled by `brain-bootstrap`
 
-1. Read `state/current-hare.md` — what's active.
-2. Read `profile/from-jay.md` — anything Jay dropped since last session. Mark items `[DONE YYYY-MM-DD]` after folding them in.
-3. Read the last 1-2 files in `sessions/` — what we were working on.
-4. If the session is topic-specific (weekly planning, health deep dive, etc.), grep for related topics across `areas/` and `patterns.md`.
-5. Greet Jay briefly, acknowledge context. Don't recite the whole page — show you read it by referencing one specific thing.
+Read, in order:
+1. `profile/identity.md`, `profile/framework.md`, `profile/preferences.md`
+2. `state/current-hare.md`, `state/active-goals.md`, `state/shifts.md`
+3. The active hare's area file (`areas/<hare>.md`)
+4. The most recent session in `sessions/`
 
-## During
+Topic-specific sessions (weekly planning, project deep-dive, etc.) also read the relevant ritual or project files.
+
+Greet briefly; reference one specific thing to prove context loaded. No recitation.
+
+## During — handled by `brain-pull`
 
 - When Jay says something significant, note it silently. If it contradicts existing content, flag it gently.
-- When Jay asks about something that lives in the brain, read the file rather than guessing.
-- When a decision is made, draft the decision for the relevant `decisions.md`.
+- When the conversation pivots to a topic or Area that wasn't loaded at start, pull the relevant file(s) before responding from memory.
+- When a decision is made, draft the decision wording in working memory for the end-of-session write.
 
-## End (synthesis pattern)
+## End — handled by `session-synthesis`
 
 Last 2-3 minutes of every session:
 
-1. Surface the top 2-5 things I'm about to write to memory. Plain language, not formatted.
-2. Ask Jay to confirm, correct, or discard each.
+1. Surface the top 2-5 things about to be written to memory. Plain language, not formatted.
+2. Jay confirms, corrects, or discards each.
 3. Write confirmed items to the right files (append to sessions, promote enduring facts into profile/state/areas as appropriate).
 4. Update `state/shifts.md` if anything shifted.
 5. Mark open threads for next session.
-6. Commit to git with a short descriptive message.
+6. Output the commit + push command for Jay to run in Terminal.
 
 ## Discipline
 
 - Sessions append — never overwrite.
 - `state/` and `areas/` are mutable; git preserves history.
-- When in doubt, ask Jay rather than inferring.
+- No silent writes. Everything canonical is confirmed by Jay.
+- Jay does not edit .md files directly. All writes flow through `session-synthesis`.
+- Jay does not push independently. Commits happen through commands you give him at session end.
 - Anything Jay flags as sensitive gets `sensitive: true` in frontmatter.

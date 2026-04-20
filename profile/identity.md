@@ -9,7 +9,7 @@ stable: true
 
 **Name:** Jay (Justin Unbedacht)
 **Email:** justinunbe@gmail.com
-**Location:** Utah (Mountain Time) — inferred from MX; confirm if relevant
+**Location:** Lehi, UT (Mountain Time)
 
 ## Family
 - **Kids:** Shaylie (6), Rowan (4)

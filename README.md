@@ -8,7 +8,8 @@ Jay's personal AI partnership memory. Plain markdown, portable, tool-agnostic. D
 - `profile/identity.md` — who Jay is (quick reference)
 - `state/current-hare.md` — what's the active focus right now
 - `sessions/` — history of working sessions, newest at the bottom
-- `profile/from-jay.md` — Jay's async backchannel
+
+Every session is bootstrapped by the `brain-bootstrap` skill; mid-session lookups by `brain-pull`; end-of-session writes by `session-synthesis`. Monthly maintenance by `consolidate-memory`. Jay does not edit files directly — all writes come through these skills with his confirmation.
 
 ## Conventions
 

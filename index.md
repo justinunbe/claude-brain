@@ -9,9 +9,14 @@ Map of Jay's memory. Read this first to orient, then pull specific files.
 
 ## Start every session
 
-1. `state/current-hare.md` — what's actively in focus
-2. Latest 1-2 entries in `sessions/` — what we were working on
-3. `profile/from-jay.md` — anything Jay dropped in the backchannel
+The `brain-bootstrap` skill handles session start. It reads:
+
+1. `profile/identity.md`, `profile/framework.md`, `profile/preferences.md`
+2. `state/current-hare.md`, `state/active-goals.md`, `state/shifts.md`
+3. The active hare's `areas/<hare>.md`
+4. The most recent session in `sessions/`
+
+Writes happen at end of session through `session-synthesis`. Jay does not edit files directly.
 
 ## Structure
 
@@ -19,7 +24,6 @@ Map of Jay's memory. Read this first to orient, then pull specific files.
 - `identity.md` — name, family, job, quick reference
 - `framework.md` — The 5 Areas, Tortoise & Hare, path to fulfillment, core values, ownership model
 - `preferences.md` — how we work together (comm style, decision-making, pace)
-- `from-jay.md` — Jay's backchannel; raw notes/directives outside of sessions
 
 ### state/ (dynamic — what's active now)
 - `current-hare.md` — which Area is the primary focus and its target
