@@ -1,17 +1,21 @@
 ---
 type: project
 updated: 2026-04-20
+confirmed: 2026-04-20
 stable: false
 ---
 
 # Milestones
 
-## Phase 1 — Foundation (in progress)
+## Phase 1 — Foundation (complete except weekly planning)
 
 - [x] Memory architecture decided
 - [x] Folder structure built
 - [x] Notion content migrated
-- [ ] GitHub private repo connected
+- [x] GitHub private repo connected
+- [x] `profile/preferences.md` confirmed by Jay (2026-04-20)
+- [x] Session-flow skills built and installed (brain-bootstrap, brain-pull, session-synthesis, consolidate-memory)
+- [x] `notion-brain` skill retired; no trigger conflict
 - [ ] Weekly planning template approved
 - [ ] First weekly planning session run
 
@@ -19,8 +23,8 @@ stable: false
 
 - [ ] Weekly planning ritual runs 4 consecutive weeks
 - [ ] Monthly consolidation runs once
+- [ ] Cold-start test: `brain-bootstrap` fires and references specific context without prompting
 - [ ] At least 2 new shifts logged in `state/shifts.md` (proves staleness handling works)
-- [ ] `profile/preferences.md` confirmed by Jay
 
 ## Phase 3 — Ingestion (target: ~8-12 weeks)
 

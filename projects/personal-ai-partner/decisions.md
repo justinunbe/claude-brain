@@ -53,3 +53,15 @@ Format: `## YYYY-MM-DD — Decision title` with Context / Decision / Rationale /
 **Context:** Claude misread Session 3 and thought Jay wanted to own some engineering (Git decisions, etc.).
 **Decision:** Corrected — machine tasks default to AI (Claude). Jay's deep work = vision, physical, relational, thinking. Engineering/plumbing is Claude's problem.
 **Rationale:** Jay named the ownership model clearly: Jay owns Vision/Standards/Exceptions; Claude owns Process/Execution/Iteration/Process decisions.
+
+## 2026-04-20 — Skills as the implementation of the session-flow rituals (Session 6)
+**Context:** Memory structure exists; next question is how to make sure it stays current and gets referenced correctly.
+**Decision:** Four Claude skills operationalize the rituals: `brain-bootstrap` (session start), `brain-pull` (mid-session depth on demand), `session-synthesis` (end-of-session writes), `consolidate-memory` (monthly maintenance). Rituals file becomes the spec; skills are the implementation.
+**Rationale:** Skills are triggered by Claude based on description match, so they fire automatically at the right moments without Jay having to remember to invoke them. Keeps the system self-enforcing.
+**Alternatives considered:** A single mega-skill covering all lifecycle events (rejected — too broad to trigger reliably). Rituals as instructions Claude reads at runtime only (rejected — no consistent trigger).
+
+## 2026-04-20 — All writes and pushes flow through Claude (Session 6)
+**Context:** First draft of the update model assumed Jay might edit files directly (via `profile/from-jay.md`) and might push to GitHub independently.
+**Decision:** Neither. Jay does not edit .md files directly. Jay does not push independently. All writes are session-driven, confirmed by Jay, written by Claude. All pushes happen via a Terminal command Claude gives Jay at session end.
+**Rationale:** Eliminates an entire category of reconciliation problems (async divergence, silent drift, file-level edits that skip confirmation). Simpler mental model, fewer branches.
+**Alternatives considered:** Keep the backchannel file for directives between sessions (rejected — Jay prefers to communicate in-session). Allow direct git ops from Jay's side when he wants to (rejected — creates consistency gaps in the commit history and breaks the confirm-then-write discipline).

@@ -1,6 +1,7 @@
 ---
 type: state
 updated: 2026-04-20
+confirmed: 2026-04-20
 stable: false
 ---
 
@@ -35,3 +36,8 @@ When something shifts, the new state propagates into the affected file(s) in `pr
 **What shifted:** Jeff Nippard app → Workouts by MacroFactor.
 **Why:** Better fit for Jay's programming.
 **Affected files:** areas/health.md, state/current-hare.md
+
+## 2026-04-20 — Write discipline rules (Session 6)
+**What shifted:** Async backchannel + possible independent pushes → All writes and all pushes flow through Claude, confirmed by Jay, committed via a Terminal command Claude gives him. Jay does not edit .md files directly. Jay does not push independently.
+**Why:** Simpler mental model — every update is session-driven, no branches. Collapses the "did the repo diverge" and "did Jay edit a file directly" reconciliation lanes entirely.
+**Affected files:** profile/from-jay.md (deleted), rituals/session-workflow.md, README.md, index.md; new skills brain-bootstrap / brain-pull / session-synthesis / consolidate-memory encode these rules.
