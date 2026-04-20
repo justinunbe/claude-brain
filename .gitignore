@@ -1,0 +1,15 @@
+# System
+.DS_Store
+Thumbs.db
+
+# Local caches
+.cache/
+*.tmp
+*.swp
+*~
+
+# Secrets — never commit
+.env
+.env.*
+secrets.*
+credentials.*
